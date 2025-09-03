@@ -7,7 +7,7 @@ public class ElectricityActivity {
     private final double EMISSION_FACTOR = 0.85; // kg CO2 per kWh
 
     // Method to input electricity data
-    public void inputElectricityUsage() 
+    public void inputElectricityData() 
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter electricity units consumed (kWh): ");
