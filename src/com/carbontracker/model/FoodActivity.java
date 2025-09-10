@@ -2,9 +2,10 @@ package com.carbontracker.model;
 
 import java.util.Scanner;
 
-public class FoodActivity {
-    String type;
-    int num;
+public class FoodActivity extends Activity{
+
+    int numMeals;
+    @O
     public void inputFoodData(Scanner sc)
     {
         System.out.println("Choose Food Type : ");
@@ -13,7 +14,7 @@ public class FoodActivity {
 
         int choice = sc.nextInt();
         System.out.print("Enter number of Meals : ");
-        num = sc.nextInt();
+        numMeals = sc.nextInt();
         
         switch(choice)
         {
