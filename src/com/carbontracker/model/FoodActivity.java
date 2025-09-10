@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class FoodActivity extends Activity{
 
     int numMeals;
-    @O
-    public void inputFoodData(Scanner sc)
+    @Override
+    public void inputData(Scanner sc)
     {
         System.out.println("Choose Food Type : ");
         System.out.print("1. Veg Meals");
@@ -25,8 +25,17 @@ public class FoodActivity extends Activity{
                 type = "Non - veg Meals";
                 break;
             default:
-                System.out.println("Invalid choice");
-                type = null;
+                System.out.println("Invalid choice, defaulting to Veg.");
+                type = "Veg Meals";
+        }
+    }
+    @Override
+    public void calculateEmission() 
+    {
+        if (type.equals("Veg Meals")) {
+            emission = numMeals * 1.2;
+        } else {
+            emission = numMeals * 2.5;
         }
     }
 }
