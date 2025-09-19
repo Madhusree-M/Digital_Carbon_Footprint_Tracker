@@ -15,7 +15,7 @@ public class ElectricityActivity {
     }
 
     // Method to calculate CO2 emissions
-    public double calculateEmissions() 
+    public double calculateEmission() 
     {
         return units * EMISSION_FACTOR;
     }
@@ -30,7 +30,7 @@ public class ElectricityActivity {
     public void displayResult() 
     {
         System.out.println("Electricity Usage: " + units + " kWh");
-        System.out.println("Estimated Emissions: " + calculateEmissions() + " kg CO2");
+        System.out.println("Estimated Emissions: " + calculateEmission() + " kg CO2");
 
     }
 }
