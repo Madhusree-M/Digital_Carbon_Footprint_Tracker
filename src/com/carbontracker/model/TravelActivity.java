@@ -1,20 +1,19 @@
 package com.carbontracker.model;
-
 import java.util.Scanner;
 
 public class TravelActivity extends Activity
 {
-    private String mode;      // travel mode (car, bus, etc.)
+    private String mode;      // travel mode
     private double distance;  // distance travelled in km
-    // private double emissions; // calculated emissions
     
-    // Example emission factors (kg CO2 per km per passenger)
-    private final double CAR_FACTOR = 0.21;       // per km
-    private final double BUS_FACTOR = 0.10;
-    private final double BIKE_FACTOR = 0.12;
-    private final double TRAIN_FACTOR = 0.05;
-    private final double PLANE_FACTOR = 0.25;
+    //CO2 in kg per km
+    final double CAR_FACTOR = 0.21;
+    final double BUS_FACTOR = 0.10;
+     final double BIKE_FACTOR = 0.12;
+    final double TRAIN_FACTOR = 0.05;
+    final double PLANE_FACTOR = 0.25;
 
+    //for saving particular type factor
     double local_factor;
     @Override
     public void inputData(Scanner sc) 
@@ -46,11 +45,11 @@ public class TravelActivity extends Activity
             case 4: mode = "Train"; 
                 local_factor = TRAIN_FACTOR;
                 break;
-            case 5: mode = "Airplane";
+            case 5: mode = "Aeroplane";
                 local_factor = PLANE_FACTOR;
                 break;
             default: 
-                System.out.println("Invalid choice! Defaulting to Car.");
+                System.out.println("Invalid choice!!(Default set to car)");
                 mode = "Car"; 
         }
     }
@@ -61,7 +60,8 @@ public class TravelActivity extends Activity
         emission = distance * local_factor;
     }
     @Override
-    public void displayResult() {
+    public void displayResult() 
+    {
         System.out.println("Travel Mode: " + mode);
         System.out.println("Distance Travelled: " + distance + " km");
         System.out.println("Estimated Emissions: " + emission + " kg CO2");

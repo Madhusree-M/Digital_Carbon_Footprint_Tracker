@@ -1,16 +1,21 @@
 package com.carbontracker.model;
-
 import java.util.Scanner;
+
+//Inheritance
+
+//Activity -> FoodActivity
 
 public class FoodActivity extends Activity{
 
     int numMeals;
+
+    //Abstraction
     @Override
     public void inputData(Scanner sc)
     {
         System.out.println("Choose Food Type : ");
-        System.out.print("1. Veg Meals");
-        System.out.print("2. Non - Veg Meals");
+        System.out.println("1. Veg Meals");
+        System.out.println("2. Non - Veg Meals");
 
         int choice = sc.nextInt();
         System.out.print("Enter number of Meals : ");
