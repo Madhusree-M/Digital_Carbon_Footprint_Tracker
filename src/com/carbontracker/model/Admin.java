@@ -26,6 +26,9 @@ public class Admin {
             System.out.print("\nEnter your choice: ");
             choice = sc.nextInt();
 
+            sc.nextLine();
+            //Next Input is String (username) so getting that new line
+
             switch (choice) 
             {
                 case 1:
