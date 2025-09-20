@@ -16,7 +16,13 @@ This project demonstrates the use of **Object-Oriented Programming (OOP) princip
   - 💡 Suggestions for reducing emissions.  
   - 👤 User registration & login system.  
 
+## UML Class Diagram
 
+🟠 Public
+🟧 Private
+🔶 Protected
+
+![UML Class Diagram](images/uml.png)
 
 
 ## 🛠️ Tech Stack
