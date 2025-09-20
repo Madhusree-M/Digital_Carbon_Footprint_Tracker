@@ -10,10 +10,11 @@ public class User {
         //Activity can store any type - Travel,Electricity,Food
         //Used List so as to maintain theorder
         
+        System.out.println("\n---------- Digital Carbon Footprint Tracker ----------\n");
+
         int choice;
         do 
         {
-            System.out.println("\n---------- Digital Carbon Footprint Tracker ----------\n");
             System.out.println("1. Add Electricity Activity");
             System.out.println("2. Add Travel Activity");
             System.out.println("3. Add Food Activity");
