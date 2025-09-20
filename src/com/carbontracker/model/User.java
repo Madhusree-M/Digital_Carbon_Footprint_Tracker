@@ -4,13 +4,34 @@ import java.util.*;
 //Main Class 
 
 public class User {
-    public static void main(String[] args) {
+    private String username;
+    private String password;
+    
+    //Constructor
+    public User(String username, String password)
+    {
+        this.username = username;
+        this.password = password;
+    }
+    //Encapsulation used (Getters)
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+
+    //Everything in one function - easy to call
+    public void call()
+    {
         Scanner sc = new Scanner(System.in);
         List<Activity> activities = new ArrayList<>();
         //Activity can store any type - Travel,Electricity,Food
         //Used List so as to maintain theorder
         
-        System.out.println("\n---------- Digital Carbon Footprint Tracker ----------\n");
 
         int choice;
         do 
