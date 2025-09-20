@@ -3,10 +3,11 @@ package com.carbontracker.model;
 import java.util.Scanner;
 
 public class ElectricityActivity extends Activity{
-    private double units;   // electricity units consumed (kiloWatthour - kWh)
-    private final double EMISSION_FACTOR = 0.85; // kg CO2 per kWh
+    double units;   
+    // electricity units used (kiloWatthour - kWh)
 
-    
+    final double EMISSION_FACTOR = 0.85; // kg CO2 per kWh
+
     public void inputData(Scanner sc) 
     {
         System.out.print("Enter electricity units: ");

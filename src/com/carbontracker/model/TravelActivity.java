@@ -1,10 +1,13 @@
 package com.carbontracker.model;
 import java.util.Scanner;
 
+//In travel class - I have tried for few types of vehicles
+//Followed naming conventions like constants in caps
+
 public class TravelActivity extends Activity
 {
-    private String mode;      // travel mode
-    private double distance;  // distance travelled in km
+    String mode;      // travel mode
+    double distance;  // distance travelled in km
     
     //CO2 in kg per km
     //final variables are used because.. easy to modify in future
@@ -22,9 +25,9 @@ public class TravelActivity extends Activity
         System.out.println("Choose your mode of travel:");
         System.out.println("1. Car");
         System.out.println("2. Bus");
-        System.out.println("3. Two-Wheeler");
+        System.out.println("3. Bike");
         System.out.println("4. Train");
-        System.out.println("5. Airplane");
+        System.out.println("5. Aeroplane");
 
         int choice = sc.nextInt();
         System.out.print("Enter distance travelled (in km): ");
@@ -52,6 +55,7 @@ public class TravelActivity extends Activity
             default: 
                 System.out.println("Invalid choice!!(Default set to car)");
                 mode = "Car"; 
+                break;
         }
     }
 
@@ -60,6 +64,7 @@ public class TravelActivity extends Activity
     {
         emission = distance * local_factor;
     }
+    
     @Override
     public void displayResult() 
     {
