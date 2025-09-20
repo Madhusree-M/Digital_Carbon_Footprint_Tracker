@@ -19,7 +19,7 @@ public class Admin {
         int choice;
         do
         {
-            System.out.println("\n---------- Digital Carbon Footprint Tracker ----------\n");
+            System.out.println("\n---------- Digital Carbon Footprint Tracker -----------\n");
             System.out.println("1.Register");
             System.out.println("2.Login");
             System.out.println("3.Exit");
@@ -53,13 +53,16 @@ public class Admin {
         System.out.print("Enter Username : ");
         String username = sc.nextLine();
 
-        System.out.print("Enter password : ");
-        String password = sc.next();
-
         while(Users.containsKey(username))
         {
             System.out.println("Username not available. Try again!!");
+            System.out.print("Enter Username : ");
+            username = sc.nextLine();
         }
+
+        System.out.print("Enter password : ");
+        String password = sc.next();
+
         User newUser = new User(username, password);
         Users.put(username,newUser);
         UserActivities.put(username, new ArrayList<>());
@@ -80,7 +83,7 @@ public class Admin {
             if(oldUser.getPassword().equals(password))
             {
                 System.out.println("Login successful..!!");
-                System.out.println("Welcome"+username+"!!");
+                System.out.println("Welcome "+username+"!!\n");
                 oldUser.call();
                 //Entire work of User class is called here
             }
