@@ -52,16 +52,16 @@ public class User {
 
         // Print summary
         double totalEmissions = 0;
-        System.out.println("\n===== Carbon Footprint Summary =====");
+        System.out.println("\n\n=============== Carbon Footprint Summary ===============");
         for (Activity act : activities) 
         {
             act.displayResult();
             act.calculateEmission();
             totalEmissions += act.emission;
-            System.out.println("-----------------------------------");
+            System.out.println("---------------------------------------------------------");
         }
 
         System.out.println("TOTAL ESTIMATED CARBON EMISSIONS: " + totalEmissions + " kg CO2");
-        System.out.println("===================================");
+        System.out.println("==================================================");
     }
 }
