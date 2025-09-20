@@ -44,6 +44,11 @@ public class TravelActivity extends Activity
     }
 
     @Override
+    public void calculateEmission()
+    {
+        return ;
+    }
+    @Override
     public void displayResult() {
         System.out.println("Travel Mode: " + mode);
         System.out.println("Distance Travelled: " + distance + " km");

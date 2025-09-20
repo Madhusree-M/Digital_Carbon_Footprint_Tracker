@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public abstract class Activity {
     protected String type;
-    protected double emission;
+    public double emission;
 
     //Abstraction
     public abstract void inputData(Scanner sc);

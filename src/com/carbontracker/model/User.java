@@ -1,11 +1,14 @@
 package com.carbontracker.model;
+import java.util.*;
+
+//Main Class 
 
 public class User {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Activity> activities = new ArrayList<>();
         //Activity can store any type - Travel,Electricity,Food
-        //Used List so as to maintain order
+        //Used List so as to maintain theorder
         
         int choice;
         do 
@@ -53,7 +56,8 @@ public class User {
         for (Activity act : activities) 
         {
             act.displayResult();
-            totalEmissions += act.calculateEmissions();
+            act.calculateEmission();
+            totalEmissions = act.emission;
             System.out.println("-----------------------------------");
         }
 
