@@ -18,6 +18,8 @@ public class FoodActivity extends Activity{
         System.out.println("2. NonVeg Meals");
 
         int choice = sc.nextInt();
+        System.out.print("Enter your choice : ");
+        
         System.out.print("Enter number of Meals : ");
         numMeals = sc.nextInt();
         
