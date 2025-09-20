@@ -3,66 +3,92 @@ package com.carbontracker.model;
 import java.util.*;
 
 public class Admin {
+    Map<String,User> Users = new HashMap<>();
+        //Decided to use map because I need Key-value pairs
+        //Example "Madhu" with ["Madhu","1234"];
+        //Used Value type as User bacause,
+            //In future I can store more details like Email, phone number
+
+    Map<String,List<Activity>> UserActivities = new HashMap<>();
+        //This map is to Connect User and their activities
+
     public static void main(String[] args)
     {
-        
+        Admin admin = new Admin();
+        Scanner sc = new Scanner(System.in);
+        int choice;
+        do
+        {
+            System.out.println("\n---------- Digital Carbon Footprint Tracker ----------\n");
+            System.out.println("1.Register");
+            System.out.println("2.Login");
+            System.out.println("3.Exit");
+            System.out.print("\nEnter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) 
+            {
+                case 1:
+                    admin.registerUser(sc);
+                    break;
+                case 2:
+                    admin.loginUser(sc);
+                    break;
+                case 3:
+                    System.out.println("Thank You!!");
+                    break;
+                default:
+                    System.out.println("Invalid choice");
+                    break;
+            }
+        }while(choice != 3);
+        sc.close();
     }
 
-    public void registerUser()
+    public void registerUser(Scanner sc)
     {
-        Map<String,User> Users = new HashMap<>();
-        //Decided to use map because I need Key-value pairs
-
-        Map<String,List<Activity>> UserActivities = new HashMap<>();
-        System.out.println("1.Login");
-        System.out.println("2.New User");
-
-
-        Scanner sc = new Scanner(System.in);
-
-        int choice;
-        choice = sc.nextInt();
-
-        while(choice != 1 && choice != 2)
-        {
-            System.out.println("Invalid choice");
-            choice = sc.nextInt();
-        }
-
         System.out.print("Enter Username : ");
         String username = sc.nextLine();
 
-        System.out.print("Enter Password : ");
+        System.out.print("Enter password : ");
         String password = sc.next();
 
-        if(choice == 2)
+        while(Users.containsKey(username))
         {
-            Users.put(username,password);
-            System.out.println("Registered Susccessfully");
-            User u = new User();
-            u.call();
+            System.out.println("Username not available. Try again!!");
         }
-        else if(choice == 1)
+        User newUser = new User(username, password);
+        Users.put(username,newUser);
+        UserActivities.put(username, new ArrayList<>());
+        System.out.println("Registration Successful..!!");
+    }
+
+    public void loginUser(Scanner sc)
+    {
+        System.out.print("Enter Username : ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter password : ");
+        String password = sc.next();
+
+        if(Users.containsKey(username))
         {
-            if(Users.containsKey(username))
+            User oldUser = Users.get(username);
+            if(oldUser.getPassword().equals(password))
             {
-                String existingPass = Users.get(username);
-                if(existingPass.equals(password))
-                {
-                    System.out.println("Login successful..!!");
-                    User u = new User();
-                    u.call();
-                }
-                else
-                {
-                    System.out.println("Invalid password");
-                }
+                System.out.println("Login successful..!!");
+                System.out.println("Welcome"+username+"!!");
+                oldUser.call();
+                //Entire work of User class is called here
+            }
+            else
+            {
+                System.out.println("Invalid Password");
             }
         }
         else
         {
-            System.out.println("User Not Registered");
+            System.out.println("Invalid Username");
         }
-            sc.close();
     }
 }
