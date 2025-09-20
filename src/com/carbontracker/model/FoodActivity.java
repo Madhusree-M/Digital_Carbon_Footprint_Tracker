@@ -15,7 +15,7 @@ public class FoodActivity extends Activity{
     {
         System.out.println("Choose Food Type : ");
         System.out.println("1. Veg Meals");
-        System.out.println("2. Non - Veg Meals");
+        System.out.println("2. NonVeg Meals");
 
         int choice = sc.nextInt();
         System.out.print("Enter number of Meals : ");
@@ -27,10 +27,10 @@ public class FoodActivity extends Activity{
                 type = "Veg Meals";
                 break;
             case 2:
-                type = "Non - veg Meals";
+                type = "Nonveg Meals";
                 break;
             default:
-                System.out.println("Invalid choice, defaulting to Veg.");
+                System.out.println("Invalid choice!!(Default set to Veg)");
                 type = "Veg Meals";
         }
     }

@@ -7,6 +7,7 @@ public class TravelActivity extends Activity
     private double distance;  // distance travelled in km
     
     //CO2 in kg per km
+    //final variables are used because.. easy to modify in future
     final double CAR_FACTOR = 0.21;
     final double BUS_FACTOR = 0.10;
      final double BIKE_FACTOR = 0.12;
