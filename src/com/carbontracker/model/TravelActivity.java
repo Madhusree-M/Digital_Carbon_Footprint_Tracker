@@ -15,6 +15,7 @@ public class TravelActivity extends Activity
     private final double TRAIN_FACTOR = 0.05;
     private final double PLANE_FACTOR = 0.25;
 
+    double local_factor;
     @Override
     public void inputData(Scanner sc) 
     {
@@ -28,14 +29,26 @@ public class TravelActivity extends Activity
         int choice = sc.nextInt();
         System.out.print("Enter distance travelled (in km): ");
         distance = sc.nextDouble();
-
+        
         switch (choice) 
         {
-            case 1: mode = "Car"; emission = distance * CAR_FACTOR; break;
-            case 2: mode = "Bus"; emission = distance * BUS_FACTOR; break;
-            case 3: mode = "Two-Wheeler"; emission = distance * BIKE_FACTOR; break;
-            case 4: mode = "Train"; emission = distance * TRAIN_FACTOR; break;
-            case 5: mode = "Airplane"; emission = distance * PLANE_FACTOR; break;
+            case 1: 
+                mode = "Car";
+                local_factor = CAR_FACTOR;
+                break;
+            case 2: 
+                mode = "Bus";
+                local_factor = BUS_FACTOR;
+                break;
+            case 3: mode = "Two-Wheeler";
+                local_factor = BIKE_FACTOR;
+                break;
+            case 4: mode = "Train"; 
+                local_factor = TRAIN_FACTOR;
+                break;
+            case 5: mode = "Airplane";
+                local_factor = PLANE_FACTOR;
+                break;
             default: 
                 System.out.println("Invalid choice! Defaulting to Car.");
                 mode = "Car"; 
@@ -45,7 +58,7 @@ public class TravelActivity extends Activity
     @Override
     public void calculateEmission()
     {
-        emission = distance * CAR_FACTOR;
+        emission = distance * local_factor;
     }
     @Override
     public void displayResult() {
