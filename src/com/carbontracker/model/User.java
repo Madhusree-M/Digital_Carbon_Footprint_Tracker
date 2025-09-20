@@ -13,12 +13,12 @@ public class User {
         int choice;
         do 
         {
-            System.out.println("\n--- Digital Carbon Footprint Tracker ---");
+            System.out.println("\n---------- Digital Carbon Footprint Tracker ----------\n");
             System.out.println("1. Add Electricity Activity");
             System.out.println("2. Add Travel Activity");
             System.out.println("3. Add Food Activity");
             System.out.println("4. Show Summary & Exit");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             choice = sc.nextInt();
 
             Activity activity = null;
@@ -35,7 +35,7 @@ public class User {
                     activity = new FoodActivity();
                     break;
                 case 4:
-                    System.out.println("\nGenerating summary...");
+                    System.out.println("\n\nGenerating summary...");
                     break;
                 default:
                     System.out.println("Invalid choice! Try again.");
