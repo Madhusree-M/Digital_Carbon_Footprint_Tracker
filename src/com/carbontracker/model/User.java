@@ -57,7 +57,7 @@ public class User {
         {
             act.displayResult();
             act.calculateEmission();
-            totalEmissions = act.emission;
+            totalEmissions += act.emission;
             System.out.println("-----------------------------------");
         }
 
