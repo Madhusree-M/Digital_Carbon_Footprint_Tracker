@@ -15,9 +15,4 @@ public abstract class Activity {
         System.out.println("Activity: " + type);
         System.out.println("CO₂ Emission: " + emission + " kg");
     }
-
-    public double getEmission() 
-    {
-        return emission;
-    }
 }
