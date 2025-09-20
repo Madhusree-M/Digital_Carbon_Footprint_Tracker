@@ -47,7 +47,7 @@ This project demonstrates the use of **Object-Oriented Programming (OOP) princip
     - Specific activity types (Transport, Electricity, Food) extend this base.  
   
   - **Inheritance**  
-    - `TransportActivity`, `FoodActivity`, and `EnergyActivity` inherit from `Activity`.  
+    - `TransportActivity`, `FoodActivity`, and `ElectricityActivity` inherit from `Activity`.  
     - Promotes reusability and clean design.  
   
   - **Polymorphism**  
