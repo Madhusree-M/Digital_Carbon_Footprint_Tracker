@@ -39,14 +39,13 @@ public class TravelActivity extends Activity
             default: 
                 System.out.println("Invalid choice! Defaulting to Car.");
                 mode = "Car"; 
-                emission = distance * CAR_FACTOR;
         }
     }
 
     @Override
     public void calculateEmission()
     {
-        return ;
+        emission = distance * CAR_FACTOR;
     }
     @Override
     public void displayResult() {
