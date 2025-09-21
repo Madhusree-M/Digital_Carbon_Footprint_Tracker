@@ -53,6 +53,7 @@ public class FoodActivity extends Activity{
     @Override
     public void displayResult() 
     {
+        System.out.println("Date : "+ getDate()+"\n");
         System.out.println("Meals type : " + type + " km");
         System.out.println("Number of Meals : " + numMeals + " km");
         System.out.println("Estimated Emissions: " + emission + " kg CO2");

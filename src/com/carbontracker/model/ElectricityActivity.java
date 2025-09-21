@@ -23,6 +23,7 @@ public class ElectricityActivity extends Activity{
     @Override
     public void displayResult() 
     {
+        System.out.println("Date : "+ getDate()+"\n");
         System.out.println("Electricity Usage: " + units + " kWh");
         System.out.println("Estimated Emissions: " + emission + " kg CO2");
 

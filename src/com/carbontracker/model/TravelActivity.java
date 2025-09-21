@@ -68,6 +68,7 @@ public class TravelActivity extends Activity
     @Override
     public void displayResult() 
     {
+        System.out.println("Date : "+ getDate()+"\n");
         System.out.println("Travel Mode: " + mode);
         System.out.println("Distance Travelled: " + distance + " km");
         System.out.println("Estimated Emissions: " + emission + " kg CO2");
