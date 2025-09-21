@@ -9,10 +9,5 @@ public abstract class Activity {
     //Abstraction
     public abstract void inputData(Scanner sc);
     public abstract void calculateEmission();
-
-    public void displayResult() 
-    {
-        System.out.println("Activity: " + type);
-        System.out.println("CO₂ Emission: " + emission + " kg");
-    }
+    public abstract void displayResult();
 }
