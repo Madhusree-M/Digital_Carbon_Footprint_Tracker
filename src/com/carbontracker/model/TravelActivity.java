@@ -11,11 +11,11 @@ public class TravelActivity extends Activity
     
     //CO2 in kg per km
     //final variables are used because.. easy to modify in future
-    final double CAR_FACTOR = 0.21;
-    final double BUS_FACTOR = 0.10;
-     final double BIKE_FACTOR = 0.12;
-    final double TRAIN_FACTOR = 0.05;
-    final double PLANE_FACTOR = 0.25;
+    final double CAR_FACTOR = 0.17;
+    final double BUS_FACTOR = 0.015;
+     final double BIKE_FACTOR = 0.05;
+    final double TRAIN_FACTOR = 0.01;
+    final double PLANE_FACTOR = 0.20;
 
     //for saving particular type factor
     double local_factor;

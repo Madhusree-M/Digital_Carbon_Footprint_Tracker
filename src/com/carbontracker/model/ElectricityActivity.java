@@ -6,7 +6,8 @@ public class ElectricityActivity extends Activity{
     double units;   
     // electricity units used (kiloWatthour - kWh)
 
-    final double EMISSION_FACTOR = 0.85; // kg CO2 per kWh
+    final double EMISSION_FACTOR = 0.82; // kg CO2 per kWh
+    //Reference given in ref folder
 
     public void inputData(Scanner sc) 
     {

@@ -9,6 +9,10 @@ public class FoodActivity extends Activity{
 
     int numMeals;
 
+    //Reference given in ref folder
+    final double VEG_FACTOR = 0.56;
+    final double NONVEG_FACTOR = 1.34;
+
     //Abstraction
     @Override
     public void inputData(Scanner sc)
@@ -40,9 +44,9 @@ public class FoodActivity extends Activity{
     public void calculateEmission() 
     {
         if (type.equals("Veg Meals")) {
-            emission = numMeals * 1.2;
+            emission = numMeals * VEG_FACTOR;
         } else {
-            emission = numMeals * 2.5;
+            emission = numMeals * NONVEG_FACTOR;
         }
     }
 }
