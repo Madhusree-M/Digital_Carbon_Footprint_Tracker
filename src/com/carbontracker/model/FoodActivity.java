@@ -49,4 +49,12 @@ public class FoodActivity extends Activity{
             emission = numMeals * NONVEG_FACTOR;
         }
     }
+
+    @Override
+    public void displayResult() 
+    {
+        System.out.println("Meals type : " + type + " km");
+        System.out.println("Number of Meals : " + numMeals + " km");
+        System.out.println("Estimated Emissions: " + emission + " kg CO2");
+    }
 }
