@@ -1,0 +1,8 @@
+Electricity Factor Reference :
+    https://cea.nic.in/wp-content/uploads/baseline/2024/01/User_Guide__Version_19.0.pdf
+
+Food Factor Reference :
+    http://www.ijcrt.org/papers/IJCRT2508272.pdf
+
+Transport Factor Reference :
+    https://shaktifoundation.in/wp-content/uploads/2017/06/WRI-2015-India-Specific-Road-Transport-Emission-Factors.pdf
