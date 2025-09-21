@@ -51,17 +51,18 @@ public class Admin {
     public void registerUser(Scanner sc)
     {
         System.out.print("Enter Username : ");
-        String username = sc.nextLine();
+        String username = sc.nextLine().trim();
+        //Testing : Without trim -> Username and password can have leading spaces
 
         while(Users.containsKey(username))
         {
             System.out.println("Username not available. Try again!!");
             System.out.print("Enter Username : ");
-            username = sc.nextLine();
+            username = sc.nextLine().trim();
         }
 
         System.out.print("Enter password : ");
-        String password = sc.next();
+        String password = sc.nextLine().trim();
 
         User newUser = new User(username, password);
         Users.put(username,newUser);
@@ -72,10 +73,10 @@ public class Admin {
     public void loginUser(Scanner sc)
     {
         System.out.print("Enter Username : ");
-        String username = sc.nextLine();
+        String username = sc.nextLine().trim();
 
         System.out.print("Enter password : ");
-        String password = sc.next();
+        String password = sc.next().trim();
 
         if(Users.containsKey(username))
         {

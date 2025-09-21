@@ -28,9 +28,10 @@ public class User {
     public void call()
     {
         Scanner sc = new Scanner(System.in);
-        List<Activity> activities = new ArrayList<>();
+        List<Activity> activities = new Vector<>();
         //Activity can store any type - Travel,Electricity,Food
         //Used List so as to maintain theorder
+        //Vector for multithreading
         
 
         int choice;
