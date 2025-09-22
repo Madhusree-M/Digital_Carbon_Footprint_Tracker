@@ -5,7 +5,7 @@ import java.util.*;
 public class Admin {
     Map<String,User> Users = new HashMap<>();
         //Decided to use map because I need Key-value pairs
-        //Example "Madhu" with ["Madhu","1234"];
+        //Ex : "Madhu" with ["Madhu","1234"];
         //Used Value type as User bacause,
             //In future I can store more details like Email, phone number
 
@@ -52,8 +52,8 @@ public class Admin {
     {
         System.out.print("Enter Username : ");
         String username = sc.nextLine().trim();
-        //Testing : Without trim -> Username and password can have leading spaces
-
+        //Test : Without trim -> Username and password can have leading spaces
+        //Ex : "Madhu" and "Madhu  " both are different
         while(Users.containsKey(username))
         {
             System.out.println("Username not available. Try again!!");
